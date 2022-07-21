@@ -63,7 +63,7 @@ function Home() {
 }
 
 function App() {
-  return <Home />;
+  return <Home/>;
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
@@ -80,15 +80,12 @@ $ npm install react-router-dom@5
 
 To start implementing routes, we first need to import `BrowserRouter` and
 `Route` from `react-router-dom`:
-
 ```jsx
 // .src/index.js
-
 import React from "react";
 import ReactDOM from "react-dom";
 // Step 1. Import react-router functions
 import { BrowserRouter, Route } from "react-router-dom";
-
 function Home() {
   return (
     <div>
@@ -223,14 +220,15 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <Switch>
-      <Route path="/">
-        <Home />
-      </Route>
+    
       <Route path="/about">
         <About />
       </Route>
       <Route path="/login">
         <Login />
+      </Route>  
+      <Route path="/">
+        <Home />
       </Route>
     </Switch>
   );
